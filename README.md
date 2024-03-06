@@ -226,31 +226,109 @@ Device driver and interrupt signals: It needs specific device drivers and interr
 Thread Priority: It is not good to set thread priority as these systems are very less prone to switching tasks.
 Examples of Real-Time Operating Systems are Scientific experiments, medical imaging systems, industrial control systems, weapon systems, robots, air traffic control systems, etc.
 ### What is process State and PCB?
+
+Certainly, here's a concise explanation for each question:
+
+1. **Process State and PCB**:
+   - Process State: It indicates the current condition of a process, such as running, ready, blocked, or terminated.
+   - PCB (Process Control Block): It's a data structure maintained by the operating system for each process, containing information like process state, program counter, CPU registers, etc.
+
 ### What is the difference between an operating system and a firmware ?
+
+   - Operating System: It's a software that manages hardware resources, provides user interfaces, and facilitates communication between software and hardware.
+   - Firmware: It's a type of software embedded into hardware devices, responsible for initializing the hardware and providing low-level control.
+
 ### What is the role of a kernel in an operating system ?
+
+   - Kernel: It's the core component of an operating system responsible for managing system resources, providing services to applications, and enforcing security policies.
 ### What is system call() ?
+
+   - System Call: It's a mechanism for processes to request services from the operating system kernel, such as I/O operations, process management, and memory allocation.
+
 ### What is fork() ?
+
+   - `fork()`: It's a system call in Unix-like operating systems used to create a new process by duplicating the existing process.
+
 ### What is the difference between threads and processes?
+
+   - Threads: They are lightweight processes within a process, sharing the same memory space and resources, but having their own stack and registers.
+   - Processes: They are independent instances of a program, each with its own memory space, resources, and execution context.
+
 ### What is multitasking in an os ?
+
+   - Multitasking: It's the ability of an operating system to execute multiple tasks or processes concurrently by rapidly switching between them.
+
 ### What is multithreading in an os?
+   - Multithreading: It's the ability of an operating system to support multiple threads within a single process, allowing concurrent execution of tasks within that process.
+
 ### What is a scheduler in os?
+
+   - Scheduler: It's a component of the operating system responsible for selecting which process/thread should run next and allocating CPU time accordingly.
+
 ### What is the difference between preemptive and non preemptive ?
+    - Preemptive: Allows the operating system to interrupt a currently running process to start or resume another process.
+    - Non-preemptive: Does not allow the operating system to interrupt a running process until it voluntarily gives up the CPU.
 
 ### What is process synchronisation ?
+    - Process Synchronization: It's the coordination of multiple processes or threads to ensure correct and orderly execution, especially when accessing shared resources or data.
+
 ### What is the purpose of virtual memory in an OS ?
+    - Virtual Memory: It provides an abstraction layer between the memory addresses used by software and the actual physical memory, allowing efficient utilization of memory resources and facilitating memory management.
 
 ### What is the difference between a deadlock and a livelock ?
+    - Deadlock: It's a situation where two or more processes are unable to proceed because each is waiting for the other to release a resource.
+    - Livelock: It's a situation where processes continuously change their states in response to each other's actions, but no progress is made.
+
+18. **Difference between a Mutex and a Binary Semaphore**:
+    - Mutex: It's a synchronization mechanism that allows only one thread to access a resource at a time.
+    - Binary Semaphore: It's a synchronization primitive with two states, typically used to control access to shared resources.
+
 ### What is interrupt handling in an os?
+
+    - Interrupt Handling: It's the process by which the operating system responds to hardware or software interrupts, temporarily suspending the current execution to handle the interrupt request.
 ### How does an opening system manage I/O operations?
+
+    - Operating systems manage I/O operations by providing device drivers, which are software components that facilitate communication between the operating system and hardware devices.
+
 ### What is the device driver in an os ?
+    - Device Driver: It's a specialized software component that allows the operating system to communicate with hardware devices and control their operation.
+
 ### What is file system management in an OS ?
+
+    - File System Management: It involves organizing and maintaining files and directories on storage devices, providing mechanisms for storage, retrieval, and manipulation of data.
+
 ### What is virtualization and its type?
+
+    - Virtualization: It's the process of creating virtual versions of hardware, software, storage devices, or network resources, allowing multiple virtual environments to run on a single physical machine.
+    - Types include server virtualization, desktop virtualization, and network virtualization.
+
 ### What is micro kernel and monolithic kernel ?
+
+    - Microkernel: It's an operating system architecture where the kernel provides minimal functionality, and additional services are implemented as user-level processes.
+    - Monolithic Kernel: It's an operating system architecture where the entire operating system, including device drivers and system services, resides in kernel space.
+
 ### What is the chmod command ?
+
+    - `chmod`: It's a command used in Unix-like operating systems to change the permissions (read, write, execute) of files and directories.
+
 ### What is internal, external fragmentation?
-### What is the difference between Spatial locality vs Temporal locality ?
+
+    - Internal Fragmentation: Wastage of allocated memory within a block due to insufficient granularity of allocation units.
+    - External Fragmentation: Free memory exists in small blocks scattered throughout the memory space, but it cannot be used to satisfy a large memory request.
+
 ### What is meant by virus, worm , Trajan, malware, Spywar
+
+    - Spatial Locality: It refers to the tendency of a program to access memory locations that are close to each other.
+    - Temporal Locality: It refers to the tendency of a program to access the same memory locations repeatedly over a short period of time.
+
 ### What is the main purpose of an operating system? Discuss different types? 
+
+    - Virus: A malicious program that replicates itself by inserting copies of itself into other programs or documents.
+    - Worm: A self-replicating program that spreads across networks and computer systems.
+    - Trojan: A type of malware disguised as legitimate software but performs malicious actions when executed.
+    - Malware: A generic term used to describe any software intentionally designed to cause damage to a computer, server, client, or computer network.
+    - Spyware: A type of malware designed to secretly monitor and record user activities on a computer system.
+
  An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. So it manages the computer’s memory, processes, devices, files, and security aspects of the system. It also allows us to communicate with the computer without knowing how to speak the computer’s language. Without an operating system, a computer is not useful.
 
 Types of operating system:
