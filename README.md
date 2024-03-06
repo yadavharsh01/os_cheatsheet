@@ -1,35 +1,35 @@
 # os_cheatsheet
-What is an operating system?
-What are the functions of os ?
-What are the different types of operating system ?
-What is process State and PCB?
-What is the difference between an operating system and a firmware ?
-What is the role of a kernel in an operating system ?
-What is system call() ?
-What is fork() ?
-What is the difference between threads and processes?
-What is multitasking in an os ?
-What is multithreading in an os?
-What is a scheduler in os?
-What is the difference between preemptive and non preemptive ?
-What is the difference between multiprogramming and multitasking ?
-What is process synchronisation ?
-What is the purpose of virtual memory in an OS ?
-What is paging and segmentation in an os ?
-What is demand paging in an os ?
-What is semaphore in an os ?
-What is the difference between a deadlock and a livelock ?
-What is the difference between a mutex and a binary semaphore?
-What is interrupt handling in an os?
-How does an opening system manage I/O operations?
-What is the device driver in an os ?
-What is file system management in an OS ?
-What is virtualization and its type?
-What is micro kernel and monolithic kernel ?
-What is the chmod command ?
-What is internal, external fragmentation?
-What is the difference between Spatial locality vs Temporal locality ?
-What is meant by virus, worm , Trajan, malware, Spywar
+### What is an operating system?
+### What are the functions of os ?
+### What are the different types of operating system ?
+### What is process State and PCB?
+### What is the difference between an operating system and a firmware ?
+### What is the role of a kernel in an operating system ?
+### What is system call() ?
+### What is fork() ?
+### What is the difference between threads and processes?
+### What is multitasking in an os ?
+### What is multithreading in an os?
+### What is a scheduler in os?
+### What is the difference between preemptive and non preemptive ?
+### What is the difference between multiprogramming and multitasking ?
+### What is process synchronisation ?
+### What is the purpose of virtual memory in an OS ?
+### What is paging and segmentation in an os ?
+### What is demand paging in an os ?
+### What is semaphore in an os ?
+### What is the difference between a deadlock and a livelock ?
+### What is the difference between a mutex and a binary semaphore?
+### What is interrupt handling in an os?
+### How does an opening system manage I/O operations?
+### What is the device driver in an os ?
+### What is file system management in an OS ?
+### What is virtualization and its type?
+### What is micro kernel and monolithic kernel ?
+### What is the chmod command ?
+### What is internal, external fragmentation?
+### What is the difference between Spatial locality vs Temporal locality ?
+### What is meant by virus, worm , Trajan, malware, Spywar
 ### What is the main purpose of an operating system? Discuss different types? 
  An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. So it manages the computer’s memory, processes, devices, files, and security aspects of the system. It also allows us to communicate with the computer without knowing how to speak the computer’s language. Without an operating system, a computer is not useful.
 
@@ -161,12 +161,188 @@ When a compiler acknowledges all the information required to call a function or 
 
 Dynamic Binding Calling a function or assigning a value to a variable, at run-time is called “Dynamic Binding”. Dynamic binding can be associated with run time ‘polymorphism’ and ‘inheritance’ in OOP. Dynamic binding makes the execution of a program flexible as it can decide what value should be assigned to the variable and which function should be called, at the time of program execution. But as this information is provided at run time it makes the execution slower as compared to static binding.
 ## Scheduling
-### FCFS Scheduling 
-### SJF Scheduling 
-### SRTF Scheduling 
-### LRTF Scheduling 
-### Priority Scheduling 
-### Round Robin Scheduling 
+Different Types of CPU Scheduling Algorithms
+ CPU scheduling algorithms 
+### First Come First Serve (FCFS) Scheduling Algorithm
+The FCFS algorithm is the simplest of scheduling algorithms in OS. This is because the deciding principle behind it is just as its name suggests- on a first come basis. The job that requests execution first gets the CPU allocated to it, then the second, and so on.
+
+Characteristics of FCFS scheduling algorithm
+
+The algorithm is easy to understand and implement.
+Programs are executed on a first come first serve basis.
+It is a non-preemptive scheduling algorithm.
+In this case, the ready queue acts as the First In First Out (FIFO) queue - Where the job that gets ready for execution first, also gets out first.
+This is used in most batch OS.
+Advantages of FCFS scheduling algorithm
+The fact that it is simple to implement means it can easily be integrated into a pre-existing system.
+It is especially useful when the processes have a large burst time since there is no need for context switching.
+The absence of low or high-priority preferences makes it fairer.
+Every process gets its chance to execute.
+Disadvantages of the FCFS scheduling algorithm
+Since its first come basis, small processes with a very short execution time, have to wait their turn.
+There is a high wait and turnaround time for this scheduling algorithm in OS.
+All in all, it leads to inefficient utilization of the CPU.
+Example of FCFS scheduling algorithm in OS-
+
+FCFS Scheduling Algorithm in OS Example
+
+In the table above, 5 processes have arrived at the CPU at different times. The process with the minimal arrival time goes first. Since the first process has a burst time of 3, the CPU will remain busy for 3 units of time, which indicates that the second process will have to wait for 1 unit of time since it arrives at T=2. In this way, the waiting and turnaround times for all processes can be calculated. This also gives the average waiting time and the average turnaround time. We can contrast this with other algorithms for the same set of processes.
+
+Using a queue for the execution of processes is helpful in keeping track of which process comes at what stage. Although this is one of the simplest CPU scheduling algorithms, it suffers from the convoy effect. This occurs when multiple smaller processes get stuck behind a large process, which leads to an extremely high average wait time. This is similar to multiple cars stuck behind a slow-moving truck on a single-lane road.
+
+### Shortest Job First (SJF) Scheduling Algorithm
+The Shortest Job First (SJF) is a CPU scheduling algorithm that selects the shortest jobs on priority and executes them. The idea is that jobs with short burst time get done quickly, making CPU available for other, longer jobs/ processes. In other words, this is a priority scheduling algorithm based on the shortest burst time.
+
+Characteristics of SJF scheduling algorithm
+
+This CPU scheduling algorithm has a minimum average wait time since it prioritizes jobs with the shortest burst time.
+If there are multiple short jobs, it may lead to starvation.
+This is a non-preemptive scheduling algorithm.
+It is easier to implement the SJF algorithm in Batch OS.
+Advantages of SJF scheduling algorithm
+
+It minimizes the average waiting time and turnaround time.
+Beneficial in long-term scheduling.
+Is better than the FCFS scheduling algorithm.
+Useful for batch processes.
+Disadvantages of the SJF scheduling algorithm
+
+As mentioned if short time jobs keep on coming, it may lead to starvation for longer jobs.
+Is dependent upon burst time, but it is not always possible to know the burst time beforehand.
+Does not work for interactive systems.
+Example of SJF scheduling algorithm in OS-
+
+SJF scheduling algorithm example
+
+Here, the first 2 processes are executed as they come, but when the 5th process comes in, it instantly jumps to the front of the queue since it has the shortest burst time. The turnaround time and waiting time is calculated accordingly. It's visible that this is an improvement over FCFS, as it smaller average waiting time as well as a smaller average turnaround time. This algorithm is especially useful in cases where there are multiple incoming processes and their burst time is known in advance. The average waiting time obtained is lower as compared to the first-come-first-served scheduling algorithm.
+
+### Longest Job First (LJF) Scheduling Algorithm
+The Longest Job First scheduling algorithm is the opposite of SJF scheduling in OS. This algorithm calls for jobs with the longest burst time to be executed first, and then move on to jobs with short burst time.
+
+Characteristics of LJF Scheduling Algorithm
+
+Incoming execution requests are sorted on the basis of burst time in descending order.
+It is a non-preemptive CPU scheduling algorithm.
+If two jobs have the same burst time, then FCFS is followed.
+This priority scheduling in OS is both non-preemptive and preemptive.
+Advantages of LJF Scheduling Algorithm
+
+The longest job gets done on priority. That is, no other job gets executed until the longest one completes the execution phase.
+Disadvantages of LJF Scheduling Algorithm
+
+It may cause starvation in jobs with a short burst time.
+The average waiting and turnaround time is high.
+The CPU needs to know the burst time beforehand which is not always possible.
+Example of LJF Scheduling Algorithm in OS-
+
+LJF Scheduling Algorithm Example
+
+The first process is executed first, then there is a choice between selecting the second or third process. The third one is selected since it has a higher burst time. Then the fourth one gets executed since it also has a higher burst time than the second process. Finally, the second process gets its chance to go. This approach of CPU scheduling leads to very high waiting times since shorter processes might have to wait for a long period of time to get executed. This also causes the aforementioned convoy effect.
+
+### Priority Scheduling Algorithm in OS
+This CPU scheduling algorithm in OS first executes the jobs with higher priority. That is, the job with the highest priority gets executed first, followed by the second prioritized jobs, and so on.
+
+Characteristics of Priority Scheduling Algorithm
+
+Jobs are scheduled on the basis of the priority level, in descending order.
+If a job with higher priority than the one running currently comes on, the CPU preempts the current job in favor of the one with higher priority.
+But for other purposes, it follows a non-preemptive scheduling approach.
+In between two jobs with the same priority, the FCFS process decides which jobs get executed first.
+The priority of a process can be set depending on multiple factors like memory requirements, required CPU time, etc.
+Advantages of Priority Scheduling Algorithm
+
+This process is simpler than most other scheduling algorithms in OS.
+Priorities help in sorting the incoming processes.
+Works well for static and dynamic environments.
+Disadvantages of Priority Scheduling Algorithm
+
+It may lead to the starvation problem in jobs with low priority.
+The average turnaround and waiting time might be higher in comparison to other CPU scheduling algorithms.
+Example of Priority Scheduling Algorithm in OS-
+
+Priority Scheduling Algorithm Example
+
+Here, different priorities are assigned to the incoming processes. The lower the number, the higher the priority. The 1st process to be executed is the second one, since it has higher priority than the first process. Then the fourth process gets its turn. This is known as priority scheduling. The calculated times may not be the lowest but it helps to prioritize important processes over others.
+
+### Round Robin Scheduling Algorithm in OS
+In this scheduling algorithm, the OS defines a quantum time or a fixed time period. And every job is run cyclically for this predefined period of time, before being preempted for the next job in the ready queue. The jobs that are preempted before completion go back to the ready queue to wait their turn. It is also referred to as the preemptive version of the FCFS scheduling algorithm in OS.
+
+Example of Round Robin Scheduler
+
+As seen from the figure, the scheduler executes the 3 incoming processes part by part.
+
+Characteristics of RR Scheduling Algorithm
+
+Once a job begins running, it is executed for a predetermined time and gets preempted after the time quantum is over.
+It is easy and simple to use or implement.
+The RR scheduling algorithm is one of the most commonly used CPU scheduling algorithms in OS.
+It is a preemptive algorithm.
+Advantages of RR Scheduling Algorithm
+
+This seems like a fair algorithm since all jobs get equal time CPU.
+Does not lead to any starvation problems.
+New jobs are added at the end of the ready queue and do not interrupt the ongoing process.
+Leads to efficient utilization of the CPU.
+Disadvantages of RR Scheduling Algorithm
+
+Every time job runs the course of quantum time, a context switch happens. This adds to the overhead time, and ultimately the overall execution time.
+A low slicing time may lead to low CPU output.
+Important tasks aren’t given priority.
+Choosing the correct time quantum is a difficult job.
+Example of RR Scheduling Algorithm in OS-
+
+RR scheduling algorithm example
+
+Let's take a quantum time of 4 units. The first process will execute and get completed. After a gap of 1 unit, the second process executes for 4 units. Then the third one executes since it has also arrived in the ready queue. After 4 units, the fourth process executes. This process keeps going until all processes are done. It is worth noting that the minimum average waiting time is higher than some of the other algorithms. While this approach does result in a higher turnaround time, it is much more efficient in multitasking environments in comparison to most other scheduling algorithms in OS.
+
+### Shortest Remaining Time First (SRTF) Scheduling Algorithm
+The SRTF scheduling algorithm is the preemptive version of the SJF scheduling algorithm in OS. This calls for the job with the shortest burst time remaining to be executed first, and it keeps preempting jobs on the basis of burst time remaining in ascending order.
+
+Characteristics of the SRTF Scheduling Algorithm
+
+The incoming processes are sorted on the basis of their CPU-burst time.
+It requires the least burst time to be executed first, but if another process arrives that has an even lesser burst time, then the former process will get preempted for the latter.
+The flow of execution is- a process is executed for some specific unit of time and then the scheduler checks if any new processes with even shorter burst times have arrived.
+Advantages of SRTF Scheduling Algorithm
+
+More efficient than SJF since it's the preemptive version of SJF.
+Efficient scheduling for batch processes.
+The average waiting time is lower in comparison to many other scheduling algorithms in OS.
+Disadvantages of SRTF Scheduling Algorithm
+
+Longer processes may starve if short jobs keep getting the first shot.
+Can’t be implemented in interactive systems.
+The context switch happens too many times, leading to a rise in the overall completion time.
+The remaining burst time might not always be apparent before the execution.
+Example of SRTF scheduling algorithm in OS-
+
+SRTF Scheduling Algorithm Example
+
+Here, the first process starts first and then the second process executes for 1 unit of time. It is then preempted by the arrival of the third process which has a lower service time. This goes on until the ready queue is empty and all processes are done executing.
+
+### Longest Remaining Time First (LRTF) Scheduling Algorithm
+This CPU scheduling algorithm is the primitive version of the LJF algorithm. It calls for the execution of the jobs with the longest remaining burst time on a priority basis.
+
+Characteristics of LRTF Scheduling Algorithm
+
+The incoming processes are sorted on the basis of their burst time, in descending order.
+It schedules the jobs with longer remaining burst time, first.
+The CPU scheduler keeps checking for new jobs with long burst times in regular intervals. And then preempts the current job in favor of other longer burst time remaining jobs.
+Advantages of LRTF Scheduling Algorithm
+
+More efficient than LJF since it is the preemptive version of the same.
+Almost all jobs get done at the same time, approximately.
+Prioritizes longer jobs first, leaving shorter ones for later.
+Disadvantages of LRTF Scheduling Algorithm
+
+The average waiting and turnaround time is extremely high.
+Shorter jobs may be neglected in favor of longer ones; which may cause starvation.
+Burst time has to be known beforehand.
+Example of LRTF scheduling algorithm in OS-
+
+LRTF Scheduling Algorithm Example
+
+The first process executes for one unit before being preempted by the second process. That, in turn, is preempted by the third process which is also preempted by the fourth process. After the longest process is done, the others get executed.
 ### Producer Consumer Problem 
 About Producer-Consumer problem: The Producer-Consumer problem is a classic problem that is used for multi-process synchronisation i.e. synchronisation between more than one processes.
 
@@ -183,5 +359,70 @@ We can solve this problem by using semaphores.
 ### Banker’s Algorithm 
 It is a banker algorithm used to avoid deadlock and allocate resources safely to each process in the computer system. The ‘S-State’ examines all possible tests or activities before deciding whether the allocation should be allowed to each process. It also helps the operating system to successfully share the resources between all the processes. The banker’s algorithm is named because it checks whether a person should be sanctioned a loan amount or not to help the bank system safely simulate allocation resources.
 ### Explain Cache
-### Diff between direct mapping and associative mapping 
+Cache memory is an extremely fast memory type that acts as a buffer between RAM and the CPU. It holds frequently requested data and instructions so that they are immediately available to the CPU when needed
+### Diff between direct mapping and associative mapping & set associative mapping
+Cache Mapping:
+
+The process /technique of bringing data of main memory blocks into the cache block is known as cache mapping.
+The mapping techniques can be classified as :
+Direct Mapping
+Associative
+Set-Associative
+1. Direct Mapping: Each block from main memory has only one possible place in the cache organization in this technique. 
+For example : every block i of the main memory can be mapped to block j of the cache using the formula : 
+
+j = i modulo m
+Where : i = main memory block number
+       j = cache block number
+       m = number of blocks in the cache
+The address here is divided into 3 fields : Tag, Block & Word.
+
+To map the memory address to cache: The BLOCK field of the address is used to access the cache’s BLOCK. Then, the tag bits in the address is compared with the tag of the block. For a match, a cache hit occurs as the required word is found in the cache. Otherwise, a cache miss occurs and the required word has to be brought into the cache from the Main Memory. The word is now stored in the cache together with the new tag (old tag is replaced).
+
+Example: If we have a fully associative mapped cache of 8 KB size with block size = 128 bytes and say, the size of main memory is = 64 KB. (Assuming word size = 1 byte) Then :
+
+Number of bits for the physical address = 16 bits (as memory size = 64 KB = 26 × 210 = 216)
+Number of bits for WORD = 7 bits (as block size = 128 bytes = 27)
+No of Index bits = 13 bits (as cache size = 8 KB = 23 × 210 = 213)
+No of BLOCK bits = Number of Index bits- Number of bits for WORD = 13 – 7 = 6bits
+
+                                                                    OR
+(No of cache Blocks = Cache size/block size = 8 KB / 128 Bytes = 8×1024 Bytes/128 Bytes = 26 blocks → 6bits)
+No of TAG bits = Number of bits for the physical address — Number of bits in Index = 16-13 = 3 bits
+
+2. Associative Mapping: Here the mapping of the main memory block can be done with any of the cache block. The memory address has only 2 fields here: word & tag. This technique is called as fully associative cache mapping.
+
+Example: If we have a fully associative mapped cache of 8 KB size with block size = 128 bytes and say, the size of main memory is = 64 KB.  Then:
+
+Number of bits for the physical address = 16 bits (as memory size = 64 KB = 26 × 210 = 216)
+Number of bits in block offset = 7 bits (as block size = 128 bytes = 27)
+No of tag bits = Number of bits for the physical address – Number of bits in block offset = 16-7 = 9 bits
+No of cache Blocks = Cache size/block size = 8 KB / 128 Bytes = 8×1024 Bytes/128 Bytes = 26 blocks.
+
+3. Set – Associative Mapping: It is the combination of advantages of both direct & associative mapping. 
+Here, the cache consists of a number sets, each of which consists of a number of blocks. The relationships are :
+
+n = w * L
+i = j modulo w
+where
+i : cache set number
+j : main memory block number
+n : number of blocks in the cache
+w : number of sets
+L : number of lines in each set
+This is referred to as L-way set-associative mapping. Block Bj can be translated into any of the blocks in set j using this mapping.
+
+To map the memory address to cache: Using set field in the memory address, we access the particular set of the cache. Then, the  tag bits in the address are compared with the tag of all L blocks within that set.  For a match, a cache hit occur as the required word is found in the cache. Otherwise,  a cache miss occurs and the required word has to be brought in the cache from the Main Memory. According to the replacement policy used, a replacement is done if the cache is full.
+
+Example: If we have a fully associative mapped cache of 8 KB size with block size = 128 bytes and say, the size of main memory is = 64 KB, and we have “2-way” set-associative mapping (Assume each word has 8 bits).   Then :
+
+Number of bits for the physical address = 16 bits (as memory size = 64 KB = 26 * 210 = 216)
+No of cache Blocks = Cache size/block size = 8 KB / 128 Bytes = 8×1024 Bytes/128 Bytes = 26 cache blocks.
+No of Main Memory Blocks = MM size/block size = 64 KB / 128 Bytes = 64×1024 Bytes/128 Bytes = 29 MM blocks.
+No of sets of size 2 = No of Cache Blocks/ L = 26/2 = 25 cache sets.(L = 2 as it is 2-way set associative mapping)
 ### Diff between multitasking and multiprocessing 
+Multi-tasking : 
+Multi-tasking is the logical extension of multiprogramming. In this system, the CPU executes multiple jobs by switching among them typically using a small time quantum, and these switches occur so frequently that the users can interact with each program while it is running. Multitasking is further classified into two categories: Single User & Multiuser. 
+ Multiprocessing : 
+Multiprocessing is a system that has two or more than two processors. In this, CPUs are added for increasing computing speed of the system. Because of Multiprocessing, there are many processes that are executed simultaneously. Multiprocessing is further classified into two categories: Symmetric Multiprocessing and Asymmetric Multiprocessing. 
+
