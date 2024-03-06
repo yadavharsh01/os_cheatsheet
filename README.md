@@ -1,7 +1,230 @@
 # os_cheatsheet
 ### What is an operating system?
+An Operating System acts as a communication bridge (interface) between the user and computer hardware. The purpose of an operating system is to provide a platform on which a user can execute programs conveniently and efficiently.
+
+An operating system is a piece of software that manages the allocation of Computer Hardware. The coordination of the hardware must be appropriate to ensure the correct working of the computer system and to prevent user programs from interfering with the proper working of the system. It also provides a basis for application programs and acts as an intermediary between the computer user and computer hardware.
 ### What are the functions of os ?
+The main task an operating system carries out is the allocation of resources and services, such as the allocation of memory, devices, processors, and information. The operating system also includes programs to manage these resources, such as a traffic controller, a scheduler, a memory management module, I/O programs, and a file system. The operating system simply provides an environment within which other programs can do useful work.
+It controls all the computer resources.
+It provides valuable services to user programs.
+It coordinates the execution of user programs.
+It provides resources for user programs.
+It provides an interface (virtual machine) to the user.
+It hides the complexity of software.
+It supports multiple execution modes.
+It monitors the execution of user programs to prevent errors.
+Some Functions:
+Memory Management
+The operating system manages the Primary Memory or Main Memory. Main memory is made up of a large array of bytes or words where each byte or word is assigned a certain address. Main memory is fast storage and it can be accessed directly by the CPU. For a program to be executed, it should be first loaded in the main memory. An operating system manages the allocation and deallocation of memory to various processes and ensures that the other process does not consume the memory allocated to one process.
+ An Operating System performs the following activities for Memory Management:
+
+It keeps track of primary memory, i.e., which bytes of memory are used by which user program. The memory addresses that have already been allocated and the memory addresses of the memory that has not yet been used. 
+In multiprogramming, the OS decides the order in which processes are granted memory access, and for how long. 
+It Allocates the memory to a process when the process requests it and deallocates the memory when the process has terminated or is performing an I/O operation. 
+
+Processor Management
+In a multi-programming environment, the OS decides the order in which processes have access to the processor, and how much processing time each process has. This function of OS is called Process Scheduling. An Operating System performs the following activities for Processor Management. 
+
+An operating system manages the processor’s work by allocating various jobs to it and ensuring that each process receives enough time from the processor to function properly.
+Keeps track of the status of processes. The program which performs this task is known as a traffic controller. Allocates the CPU that is a processor to a process. De-allocates processor when a process is no longer required.
+
+Device Management
+An OS manages device communication via its respective drivers. It performs the following activities for device management.
+
+Keeps track of all devices connected to the system. Designates a program responsible for every device known as the Input/Output controller.
+Decide which process gets access to a certain device and for how long.
+Allocates devices effectively and efficiently. Deallocates devices when they are no longer required.
+ There are various input and output devices. An OS controls the working of these input-output devices.
+It receives the requests from these devices, performs a specific task, and communicates back to the requesting process.
+File Management
+A file system is organized into directories for efficient or easy navigation and usage. These directories may contain other directories and other files. An Operating System carries out the following file management activities. It keeps track of where information is stored, user access settings, the status of every file, and more. These facilities are collectively known as the file system. An OS keeps track of information regarding the creation, deletion, transfer, copy, and storage of files in an organized way. It also maintains the integrity of the data stored in these files, including the file directory structure, by protecting against unauthorized access.
+
+User Interface or Command Interpreter
+The user interacts with the computer system through the operating system. Hence OS acts as an interface between the user and the computer hardware. This user interface is offered through a set of commands or a graphical user interface (GUI). Through this interface, the user makes interacts with the applications and the machine hardware.
+
+Booting the Computer
+The process of starting or restarting the computer is known as booting. If the computer is switched off completely and if turned on then it is called cold booting. Warm booting is a process of using the operating system to restart the computer.
+
+Security
+The operating system uses password protection to protect user data and similar other techniques. it also prevents unauthorized access to programs and user data. The operating system provides various techniques which assure the integrity and confidentiality of user data. The following security measures are used to protect user data:
+
+ Protection against unauthorized access through login.
+Protection against intrusion by keeping the firewall active.
+Protecting the system memory against malicious access.
+Displaying messages related to system vulnerabilities.
+Control Over System Performance
+Operating systems play a pivotal role in controlling and optimizing system performance. They act as intermediaries between hardware and software, ensuring that computing resources are efficiently utilized. One fundamental aspect is resource allocation, where the OS allocates CPU time, memory, and I/O devices to different processes, striving to provide fair and optimal resource utilization. Process scheduling, a critical function, helps decide which processes or threads should run when preventing any single task from monopolizing the CPU and enabling effective multitasking.
+
+Job Accounting
+The operating system Keeps track of time and resources used by various tasks and users, this information can be used to track resource usage for a particular user or group of users. In a multitasking OS where multiple programs run simultaneously, the OS determines which applications should run in which order and how time should be allocated to each application.
+
+Error-Detecting Aids
+The operating system constantly monitors the system to detect errors and avoid malfunctioning computer systems. From time to time, the operating system checks the system for any external threat or malicious software activity. It also checks the hardware for any type of damage. This process displays several alerts to the user so that the appropriate action can be taken against any damage caused to the system.
+
+Coordination Between Other Software and Users
+Operating systems also coordinate and assign interpreters, compilers, assemblers, and other software to the various users of the computer systems. In simpler terms, think of the operating system as the traffic cop of your computer. It directs and manages how different software programs can share your computer’s resources without causing chaos. It ensures that when you want to use a program, it runs smoothly without crashing or causing problems for others. So, it’s like the friendly officer ensuring a smooth flow of traffic on a busy road, making sure everyone gets where they need to go without any accidents or jams.
+
+Performs Basic Computer Tasks
+
+The management of various peripheral devices such as the mouse, keyboard, and printer is carried out by the operating system. Today most operating systems are plug-and-play. These operating systems automatically recognize and configure the devices with no user interference.
+
+Network Management
+Network Communication: Think of them as traffic cops for your internet traffic. Operating systems help computers talk to each other and the internet. They manage how data is packaged and sent over the network, making sure it arrives safely and in the right order.
+Settings and Monitoring: Think of them as the settings and security guard for your internet connection. They also let you set up your network connections, like Wi-Fi or Ethernet, and keep an eye on how your network is doing. They make sure your computer is using the network efficiently and securely, like adjusting the speed of your internet or protecting your computer from online threats.
 ### What are the different types of operating system ?
+There are several types of Operating Systems which are mentioned below.
+
+Batch Operating System
+Multi-Programming System
+Multi-Processing System
+Multi-Tasking Operating System
+Time-Sharing Operating System
+Distributed Operating System
+Network Operating System
+Real-Time Operating System
+1. Batch Operating System
+This type of operating system does not interact with the computer directly. There is an operator which takes similar jobs having the same requirement and groups them into batches. It is the responsibility of the operator to sort jobs with similar needs. 
+
+Advantages of Batch Operating System
+
+It is very difficult to guess or know the time required for any job to complete. Processors of the batch systems know how long the job would be when it is in the queue.
+Multiple users can share the batch systems.
+The idle time for the batch system is very less.
+It is easy to manage large work repeatedly in batch systems.
+Disadvantages of Batch Operating System
+
+The computer operators should be well known with batch systems.
+Batch systems are hard to debug.
+It is sometimes costly.
+The other jobs will have to wait for an unknown time if any job fails.
+Examples of Batch Operating Systems: Payroll Systems, Bank Statements, etc. 
+
+2. Multi-Programming Operating System
+Multiprogramming Operating Systems can be simply illustrated as more than one program is present in the main memory and any one of them can be kept in execution. This is basically used for better execution of resources.
+
+Advantages of Multi-Programming Operating System
+
+Multi Programming increases the Throughput of the System.
+It helps in reducing the response time.
+Disadvantages of Multi-Programming Operating System
+
+There is not any facility for user interaction of system resources with the system.
+3. Multi-Processing Operating System
+Multi-Processing Operating System is a type of Operating System in which more than one CPU is used for the execution of resources. It betters the throughput of the System.
+
+Advantages of Multi-Processing Operating System
+
+It increases the throughput of the system.
+As it has several processors, so, if one processor fails, we can proceed with another processor.
+Disadvantages of Multi-Processing Operating System
+
+Due to the multiple CPU, it can be more complex and somehow difficult to understand.
+4. Multi-Tasking Operating System
+Multitasking Operating System is simply a multiprogramming Operating System with having facility of a Round-Robin Scheduling Algorithm. It can run multiple programs simultaneously.
+
+There are two types of Multi-Tasking Systems which are listed below.
+
+Preemptive Multi-Tasking
+Cooperative Multi-Tasking
+Multitasking
+Advantages of Multi-Tasking Operating System
+
+Multiple Programs can be executed simultaneously in Multi-Tasking Operating System.
+It comes with proper memory management.
+Disadvantages of Multi-Tasking Operating System
+
+The system gets heated in case of heavy programs multiple times.
+5. Time-Sharing Operating Systems
+Each task is given some time to execute so that all the tasks work smoothly. Each user gets the time of the CPU as they use a single system. These systems are also known as Multitasking Systems. The task can be from a single user or different users also. The time that each task gets to execute is called quantum. After this time interval is over OS switches over to the next task. 
+
+Advantages of Time-Sharing OS
+
+Each task gets an equal opportunity.
+Fewer chances of duplication of software.
+CPU idle time can be reduced.
+Resource Sharing: Time-sharing systems allow multiple users to share hardware resources such as the CPU, memory, and peripherals, reducing the cost of hardware and increasing efficiency.
+Improved Productivity: Time-sharing allows users to work concurrently, thereby reducing the waiting time for their turn to use the computer. This increased productivity translates to more work getting done in less time.
+Improved User Experience: Time-sharing provides an interactive environment that allows users to communicate with the computer in real time, providing a better user experience than batch processing.
+Disadvantages of Time-Sharing OS
+
+Reliability problem.
+One must have to take care of the security and integrity of user programs and data.
+Data communication problem.
+High Overhead: Time-sharing systems have a higher overhead than other operating systems due to the need for scheduling, context switching, and other overheads that come with supporting multiple users.
+Complexity: Time-sharing systems are complex and require advanced software to manage multiple users simultaneously. This complexity increases the chance of bugs and errors.
+Security Risks: With multiple users sharing resources, the risk of security breaches increases. Time-sharing systems require careful management of user access, authentication, and authorization to ensure the security of data and software.
+Examples of Time-Sharing OS with explanation
+
+IBM VM/CMS: IBM VM/CMS is a time-sharing operating system that was first introduced in 1972. It is still in use today, providing a virtual machine environment that allows multiple users to run their own instances of operating systems and applications.
+TSO (Time Sharing Option): TSO is a time-sharing operating system that was first introduced in the 1960s by IBM for the IBM System/360 mainframe computer. It allowed multiple users to access the same computer simultaneously, running their own applications.
+Windows Terminal Services: Windows Terminal Services is a time-sharing operating system that allows multiple users to access a Windows server remotely. Users can run their own applications and access shared resources, such as printers and network storage, in real-time.
+6. Distributed Operating System
+These types of operating system is a recent advancement in the world of computer technology and are being widely accepted all over the world and, that too, at a great pace. Various autonomous interconnected computers communicate with each other using a shared communication network. Independent systems possess their own memory unit and CPU. These are referred to as loosely coupled systems or distributed systems. These systems’ processors differ in size and function. The major benefit of working with these types of the operating system is that it is always possible that one user can access the files or software which are not actually present on his system but some other system connected within this network i.e., remote access is enabled within the devices connected in that network. 
+
+Advantages of Distributed Operating System
+
+Failure of one will not affect the other network communication, as all systems are independent of each other.
+Electronic mail increases the data exchange speed.
+Since resources are being shared, computation is highly fast and durable.
+Load on host computer reduces.
+These systems are easily scalable as many systems can be easily added to the network.
+Delay in data processing reduces.
+Disadvantages of Distributed Operating System
+
+Failure of the main network will stop the entire communication.
+To establish distributed systems the language is used not well-defined yet.
+These types of systems are not readily available as they are very expensive. Not only that the underlying software is highly complex and not understood well yet.
+Examples of Distributed Operating Systems are LOCUS, etc. 
+
+The distributed os must tackle the following issues:
+
+Networking causes delays in the transfer of data between nodes of a distributed system. Such delays may lead to an inconsistent view of data located in different nodes, and make it difficult to know the chronological order in which events occurred in the system.
+Control functions like scheduling, resource allocation, and deadlock detection have to be performed in several nodes to achieve computation speedup and provide reliable operation when computers or networking components fail.
+Messages exchanged by processes present in different nodes may travel over public networks and pass through computer systems that are not controlled by the distributed operating system. An intruder may exploit this feature to tamper with messages, or create fake messages to fool the authentication procedure and masquerade as a user of the system.
+
+7. Network Operating System
+These systems run on a server and provide the capability to manage data, users, groups, security, applications, and other networking functions. These types of operating systems allow shared access to files, printers, security, applications, and other networking functions over a small private network. One more important aspect of Network Operating Systems is that all the users are well aware of the underlying configuration, of all other users within the network, their individual connections, etc. and that’s why these computers are popularly known as tightly coupled systems.
+Advantages of Network Operating System 
+
+Highly stable centralized servers.
+Security concerns are handled through servers.
+New technologies and hardware up-gradation are easily integrated into the system.
+Server access is possible remotely from different locations and types of systems.
+Disadvantages of Network Operating System 
+
+Servers are costly.
+User has to depend on a central location for most operations.
+Maintenance and updates are required regularly.
+Examples of Network Operating Systems are Microsoft Windows Server 2003, Microsoft Windows Server 2008, UNIX, Linux, Mac OS X, Novell NetWare, BSD, etc. 
+
+8. Real-Time Operating System
+These types of OSs serve real-time systems. The time interval required to process and respond to inputs is very small. This time interval is called response time. 
+Real-time systems are used when there are time requirements that are very strict like missile systems, air traffic control systems, robots, etc. 
+
+Types of Real-Time Operating Systems
+
+Hard Real-Time Systems: 
+Hard Real-Time OSs are meant for applications where time constraints are very strict and even the shortest possible delay is not acceptable. These systems are built for saving life like automatic parachutes or airbags which are required to be readily available in case of an accident. Virtual memory is rarely found in these systems.
+Soft Real-Time Systems: 
+These OSs are for applications where time-constraint is less strict.
+For more, refer to the Difference Between Hard Real-Time OS and Soft Real-Time OS.
+
+Advantages of RTOS
+
+Maximum Consumption: Maximum utilization of devices and systems, thus more output from all the resources.
+Task Shifting: The time assigned for shifting tasks in these systems is very less. For example, in older systems, it takes about 10 microseconds in shifting from one task to another, and in the latest systems, it takes 3 microseconds.
+Focus on Application: Focus on running applications and less importance on applications that are in the queue.
+Real-time operating system in the embedded system: Since the size of programs is small, RTOS can also be used in embedded systems like in transport and others.
+Error Free: These types of systems are error-free.
+Memory Allocation: Memory allocation is best managed in these types of systems.
+Disadvantages of RTOS  
+
+Limited Tasks: Very few tasks run at the same time and their concentration is very less on a few applications to avoid errors.
+Use heavy system resources: Sometimes the system resources are not so good and they are expensive as well.
+Complex Algorithms: The algorithms are very complex and difficult for the designer to write on.
+Device driver and interrupt signals: It needs specific device drivers and interrupts signal to respond earliest to interrupts.
+Thread Priority: It is not good to set thread priority as these systems are very less prone to switching tasks.
+Examples of Real-Time Operating Systems are Scientific experiments, medical imaging systems, industrial control systems, weapon systems, robots, air traffic control systems, etc.
 ### What is process State and PCB?
 ### What is the difference between an operating system and a firmware ?
 ### What is the role of a kernel in an operating system ?
