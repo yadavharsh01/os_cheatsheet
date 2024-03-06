@@ -12,14 +12,11 @@
 ### What is multithreading in an os?
 ### What is a scheduler in os?
 ### What is the difference between preemptive and non preemptive ?
-### What is the difference between multiprogramming and multitasking ?
+
 ### What is process synchronisation ?
 ### What is the purpose of virtual memory in an OS ?
-### What is paging and segmentation in an os ?
-### What is demand paging in an os ?
-### What is semaphore in an os ?
+
 ### What is the difference between a deadlock and a livelock ?
-### What is the difference between a mutex and a binary semaphore?
 ### What is interrupt handling in an os?
 ### How does an opening system manage I/O operations?
 ### What is the device driver in an os ?
